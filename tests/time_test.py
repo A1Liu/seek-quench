@@ -1,6 +1,6 @@
 from test_utils import generate_seq, mutate_seq
 from seqalign import global_align, semiglobal_align, local_align
-# from src import global_align0, semiglobal_align0, local_align0
+from src import global_align0, semiglobal_align0, local_align0,encodeDNA,decodeDNA
 import time
 
 SEQ_LENGTH = 20
@@ -23,13 +23,13 @@ def timeTest():
 	local_align(SEQ1, SEQ2, GAP, MATCH, MISMATCH)
 	return time.time()-t0
 
-# def timeTest0():
-# 	global SEQ1, SEQ2, GAP, MATCH, MISMATCH
-# 	t0 = time.time()
-# 	global_align0(SEQ1, LEN1, SEQ2, LEN2, GAP, MATCH, MISMATCH)
-# 	semiglobal_align0(SEQ1, LEN1, SEQ2, LEN2, GAP, MATCH, MISMATCH)
-# 	local_align0(SEQ1, LEN1, SEQ2, LEN2, GAP, MATCH, MISMATCH)
-# 	return time.time()-t0
+def timeTest0():
+	global SEQ1, SEQ2, GAP, MATCH, MISMATCH
+	t0 = time.time()
+	global_align0(SEQ1, LEN1, SEQ2, LEN2, GAP, MATCH, MISMATCH)
+	semiglobal_align0(SEQ1, LEN1, SEQ2, LEN2, GAP, MATCH, MISMATCH)
+	local_align0(SEQ1, LEN1, SEQ2, LEN2, GAP, MATCH, MISMATCH)
+	return time.time()-t0
 
 def timeData(runs):
 	total=timeTest()
