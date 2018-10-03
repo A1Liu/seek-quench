@@ -10,6 +10,8 @@
 # and recombined them into seekQueens.py using makefile.py
 makefile.py
 src/*
-*.c
+breakfile.py
 build/
+*.c
 *.so
+tests/seqalign.py
